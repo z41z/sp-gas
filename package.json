@@ -1,0 +1,26 @@
+{
+  "name": "sp-gas",
+  "version": "1.0.0",
+  "description": "Calc gas range",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack --mode production --config=webpack.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/z41z/sp-gas.git"
+  },
+  "keywords": [
+    "npm",
+    "sp-gas"
+  ],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/z41z/sp-gas/issues"
+  },
+  "homepage": "https://github.com/z41z/sp-gas#readme",
+  "dependencies": {
+    "sp-math": "^1.0.2"
+  }
+}
