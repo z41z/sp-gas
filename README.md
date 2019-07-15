@@ -5,7 +5,7 @@ Calc gas range
 ## Install
 
 ``` node
-  npm i sp-computed //or yarn add sp-computed
+  npm i sp-gas //or yarn add sp-gas
 ```
 
 ## CDN
