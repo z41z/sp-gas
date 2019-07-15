@@ -2,6 +2,41 @@
 
 Calc gas range
 
+## Install
+
+``` node
+  npm i sp-computed //or yarn add sp-computed
+```
+
+## CDN
+
+``` js
+  <script src="https://unpkg.com/sp-gas/dist/index.min.js"></script>
+  <script>
+    let { calcGasRadius } = __Gas
+  </script>
+```
+
+### Usage
+``` js
+  let { calcGasRadius } = require("sp-gas")
+  let speed = 0 // 泄漏风速
+  let radius = 0 // 泄漏开口半径
+  let p1 = 3.17 //临界压力
+  let p2 = 1393 //两相混合物的平均密度
+  let cp = 0.957 //两相混合物比定压热容
+  let t = 24.85 //两相混合物温度
+  let t0 = -34.15 //液体沸点温度
+  let h = 280 //液体汽化热
+  let c0 = 890 // 死亡浓度
+  let c1 = 300 // 重伤浓度
+  let c2 = 90 // 轻伤浓度
+  let c3 = 9 // 反应浓度
+  let r0 = calcGasRadius(speed, c0, radius,p1, p2, cp, t, t0, h) // 致死半径
+  let r1 = calcGasRadius(speed, c1, radius,p1, p2, cp, t, t0, h) // 重伤半径
+  let r2 = calcGasRadius(speed, c2, radius,p1, p2, cp, t, t0, h) // 轻伤半径
+  let r3 = calcGasRadius(speed, c3, radius,p1, p2, cp, t, t0, h) // 警戒半径
+```
 ## 常见危险气体属性
 
 |气体名|反应浓度|轻伤浓度|重伤浓度|死亡浓度|反应质量分数|重伤质量分数|致死质量分数|标准大气压密度|液化密度|两相混合物比定压热容|两相混合物摄氏度|液体沸点摄氏度|液体汽化热
